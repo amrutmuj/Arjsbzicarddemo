@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.0.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.9.3/aframe/build/aframe-ar.js"></script>
 </head>
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-        <a-marker type='pattern' url='marker.png'>
-
-            <a-card width='3' height='4' position='0 0 0' material='color: white;'>
-                <a-text value='Your Name' align='center' position='0 1.5 0' font='https://cdn.aframe.io/fonts/Exo2Bold.fnt'></a-text>
-                <a-text value='Your Title' align='center' position='0 1 0' font='https://cdn.aframe.io/fonts/Exo2Bold.fnt'></a-text>
-                <a-text value='Your Company' align='center' position='0 0.5 0' font='https://cdn.aframe.io/fonts/Exo2Bold.fnt'></a-text>
-                <a-text value='email' align='center' position='0 0 0' font='https://cdn.aframe.io/fonts/Exo2Bold.fnt'></a-text>
-                <a-text value='phone' align='center' position='0 -0.5 0' font='https://cdn.aframe.io/fonts/Exo2Bold.fnt'></a-text>
-            </a-card>
-        </a-marker>
-        <a-entity camera></a-entity>
-    </a-scene>
+  <a-scene embedded arjs>
+    <a-marker preset="hiro">
+      <a-box position='0 0.5 0' material='color: red;'></a-box>
+    </a-marker>
+  </a-scene>
 </body>
 </html>
